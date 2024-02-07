@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="https://dq2gn5p12glyq.cloudfront.net/p/assets/all_401d0c4aa175d26cc10f92ff86930daa.css" type="text/css">
+<script type="text/javascript">
+var __jqdeferred=[];function $(a){__jqdeferred.push(a);}
+</script>
+
+<script type="text/javascript">
+var Globals = {"assets":[{"wildcat_jpeged":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/example-input_33347cf4f205b2986007f60306afb948.jpeg","wildcat_smoothed":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/example-output_353d139b06097fab956936e80918d3a0.jpeg","remove":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/icon-remove_c3091dfb25e040598c020978e9d78394.svg"},{"wildcat_jpeged":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/face-sticker-1-input_ad8a2d61e6c22544a761df086e51acbd.jpeg","wildcat_smoothed":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/face-sticker-1-output_9f8329f6adde396a1d6876d06024667b.jpeg","remove":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/icon-remove_c3091dfb25e040598c020978e9d78394.svg"}],"isDev":false};
+</script>
+<script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.js" integrity="sha512-vCUbejtS+HcWYtDHRF2T5B0BKwVG/CLeuew5uT2AiX4SJ2Wff52+kfgONvtdATqkqQMC9Ye5K+Td0OTaz+P7cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer src="https://dq2gn5p12glyq.cloudfront.net/p/assets/all_de05da03769edfc50afd9aef8871f3f8.js" type="text/javascript"></script>
+<script defer src="https://dq2gn5p12glyq.cloudfront.net/p/assets/m/Main.min_d7cea5e91ffa74dee8ce5c8f744dbb32.js" type="text/javascript"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pixian.AI">
+<meta name="theme-color" content="#a89db3">
+<link sizes="180x180" rel="apple-touch-icon" href="https://dq2gn5p12glyq.cloudfront.net/p/assets/m/favicons/pixian/apple-touch-icon-180_e5c5e123409b599a279b94c9a92e643f.png">
+<link sizes="32x32" rel="icon" href="https://dq2gn5p12glyq.cloudfront.net/p/assets/m/favicons/pixian/favicon-32_46dab9b5e2e7d199a3e92e0d55dbd817.png" type="image/png">
+<link sizes="any" rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%0D%0A%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill%3A%234E3764%3B%7D.cls-2%2C.cls-3%7Bfill%3A%23fff%3B%7D.cls-2%7Bopacity%3A0.51%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%0D%0A%3Ctitle%3Epixian%20logo%3C%2Ftitle%3E%0D%0A%3Crect%20class%3D%22cls-1%22%20width%3D%2216%22%20height%3D%2216%22%20rx%3D%222%22%20ry%3D%222%22%2F%3E%0D%0A%3Cg%20class%3D%22cls-2%22%3E%0D%0A%09%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%225%22%20height%3D%225%22%20rx%3D%221%22%20ry%3D%221%22%2F%3E%0D%0A%09%3Crect%20x%3D%229%22%20y%3D%222%22%20width%3D%225%22%20height%3D%225%22%20rx%3D%221%22%20ry%3D%221%22%2F%3E%0D%0A%09%3Crect%20x%3D%222%22%20y%3D%229%22%20width%3D%225%22%20height%3D%225%22%20rx%3D%221%22%20ry%3D%221%22%2F%3E%0D%0A%3C%2Fg%3E%0D%0A%3Cg%20class%3D%22cls-3%22%20transform%3D%22translate%2811.5%2011.5%29%20rotate%2845%29%22%3E%0D%0A%09%3Crect%20x%3D%22-0.5%22%20y%3D%22-3.25%22%20width%3D%221%22%20height%3D%226.5%22%20rx%3D%22.5%22%20ry%3D%22.5%22%2F%3E%0D%0A%09%3Crect%20x%3D%22-3.25%22%20y%3D%22-0.5%22%20width%3D%226.5%22%20height%3D%221%22%20rx%3D%22.5%22%20ry%3D%22.5%22%2F%3E%0D%0A%3C%2Fg%3E%0D%0A%3C%2Fsvg%3E" type="image/svg+xml">
+<link rel="manifest" href="data:application/manifest+json,%7B%22id%22%3A%22pixian-en%22%2C%22name%22%3A%22Pixian.AI%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fdq2gn5p12glyq.cloudfront.net%2Fp%2Fassets%2Fm%2Ffavicons%2Fpixian%2Ffavicon-192_02be2ae18a91166ab7753d0cd7fe627c.png%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fpng%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fdq2gn5p12glyq.cloudfront.net%2Fp%2Fassets%2Fm%2Ffavicons%2Fpixian%2Ffavicon-512_8e26713e93c727a7fe0a3d21338346ab.png%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fpng%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fdq2gn5p12glyq.cloudfront.net%2Fp%2Fassets%2Fm%2Ffavicons%2Fpixian%2Ffavicon-maskable-512_23c55bf909cc68ab340577e479257ddc.png%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fpng%22%2C%22purpose%22%3A%22maskable%22%7D%5D%2C%22start_url%22%3A%22https%3A%2F%2Fpixian.ai%2F%22%2C%22background_color%22%3A%22%23a89db3%22%2C%22description%22%3A%22Image%20Background%20Remover.%20Fully%20automatic%20background%20removal%20in%20one%20convenient%20website%20-%20just%20upload%20your%20image%20and%20get%20the%20background%20removed%20in%20seconds.%20Super%20convenient%20for%20e-commerce%20product%20shots%2C%20marketing%20materials%2C%20and%20more.%20%22%2C%22display%22%3A%22minimal-ui%22%2C%22lang%22%3A%22en%22%2C%22theme_color%22%3A%22%23a89db3%22%7D">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PJCBP7EH1" type="text/javascript"></script>
+<script type="text/javascript">
+window.dataLayer = window.dataLayer || [];
+function ga() {}
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date()); gtag('set','page_location',"\/comparisons\/show"); gtag('config','G-1PJCBP7EH1',{'anonymize_ip':true});
+</script>
+<script type="text/javascript">
+window.onerror = function(message, file, line) {
+  var m = '[' + file + ' (' + line + ')] ' + message + '; https:\/\/pixian.ai\/comparisons ' + navigator.userAgent + '|' + navigator.vendor + '|' + navigator.platform;
+  if (!(("Script error." == message || "Script error" == message) && line == 0)) {
+    gtag('event', 'exception', {'description': m, 'fatal': false});
+  }
+};
+</script>
+
+<script type="text/javascript">
+var GlobalsEx = {"LocaleParameter":"lc=en-US","MaxMaxNumMegapixels":8,"MaxMaxNumPixels":8000000,"model":0};var I18nPhrases = {"Dropped a non-file input":"Dropped a non-file input","Original size: {0}":"Original size: {0}","Error":"Error","Failed to read image file with name: \"{0}\", and type: \"{1}\".":"Failed to read image file with name: \"{0}\", and type: \"{1}\".","Please try the latest version of one of these browsers instead: <b>{0}, {1}, {2}<\/b>.":"Please try the latest version of one of these browsers instead: <b>{0}, {1}, {2}<\/b>.","Result":"Result","Please verify your network connection.":"Please verify your network connection.","Original":"Original","Failed to send message to worker.":"Failed to send message to worker.","Unable to connect to the worker. Is your firewall or proxy blocking WebSockets?":"Unable to connect to the worker. Is your firewall or proxy blocking WebSockets?","Terribly sorry, but your browser appears to be missing key feature(s) required to use this website:":"Terribly sorry, but your browser appears to be missing key feature(s) required to use this website:","Pasted something that wasn't an image or URL?":"Pasted something that wasn't an image or URL?","Unexpected disconnection from the server.":"Unexpected disconnection from the server.","Unsupported Browser":"Unsupported Browser","Unexpected worker disconnection.":"Unexpected worker disconnection.","Failed to fetch \"{0}\"":"Failed to fetch \"{0}\"","Retrying now...":"Retrying now...","Failed to upload the image: {0}":"Failed to upload the image: {0}","Connect to worker":"Connect to worker","Terribly sorry, but that file is too large to process. Please try another.":"Terribly sorry, but that file is too large to process. Please try another.","Failed to connect to the server.":"Failed to connect to the server.","Retrying in {0} {0,plural,one{second}other{seconds}}...":"Retrying in {0} {0,plural,one{second}other{seconds}}...","Task":"Task","Pasted a non-file input":"Pasted a non-file input"};
+</script>
+<meta property="og:image" content="https://dq2gn5p12glyq.cloudfront.net/p/assets/images/example-og-image_75009c3699bf4696de1d452906c49ac7.jpeg">
+<title>Compare Pixian To Another Background Removal Service - Pixian.AI</title>
+<script type="text/javascript">
+var GlobalsShared = {"locale":"en-US","localeQueryParameter":"lc"};
+</script>
+<!-- pixian-7b047dd936c3120e46727764ae3c10a16b6a46f5-332078aad7d626a1d0767927b5e4eac96004ede5-445df96af192f0acf23586e9e7c664ce -->
+</head>
+
+<body id="main">
+<div class="top-section hidden-print">
+<div class="YoNavbar-outer_container">
+<div class="YoNavbar-container container ">
+<div class="YoNavbar-language_bar">
+</div>
+<div class="YoNavbar-table">
+<ul class="YoNavbar-navbar YoNavbar-left">
+<li style="padding-left: 5px;">
+<a href="/" class="YoNavbar-brand">
+<div class="svg-icon">
+<img src="https://dq2gn5p12glyq.cloudfront.net/p/assets/images/logo_20243d2bf2c0dba61b56e66cb5c4b50e.svg" importance="low" decode="async" loading="lazy">
+</div>
+<span class="YoNavbar-logo_text">
+Pixian.AI
+<sup class="i">
+<small>Beta</small>
+</sup>
+</span>
+</a>
+</li>
+</ul>
+<ul class="YoNavbar-navbar YoNavbar-middle_left">
+
+<li>
+<a href="/api" class>API</a>
+</li>
+
+<li class="hidden-xs active">
+<a href="/comparisons" class>Comparisons</a>
+</li>
+
+<li>
+<a href="/pricing" class>Pricing</a>
+</li>
+
+<li>
+<a href="/support" class>Support</a>
+</li>
+
+<li>
+<a href="/face-stickers" class>Face Stickers</a>
+</li>
+</ul>
+<ul class="YoNavbar-navbar YoNavbar-middle"></ul>
+<ul class="YoNavbar-navbar YoNavbar-middle_right">
+</ul>
+<ul class="YoNavbar-navbar YoNavbar-right">
+<li>
+<a href="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fcomparisons" class="Signon-trigger" data-url="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fcomparisons&amp;noChrome=1">Create Account</a>
+</li>
+<li>
+<a href="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fcomparisons&amp;email=" class="Signon-trigger" data-url="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fcomparisons&amp;email=&amp;noChrome=1">Log In</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+</div>
+</div>
+<div class="container">
+
+<div class="row">
+<div class="col-md-12">
+<div style="display: none;" id="App-ModernizrAlert" class="alert alert-danger">
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<h1>Compare Pixian To Another Background Removal Service</h1>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8 col-md-push-2">
+<p>
+To help you migrate with confidence, Pixian offers this tailored workflow that lets you do an in-depth, statistically meaningful comparison of the services' results. 
+</p>
+<p>
+While it may at first seem daunting, it's actually quite straightforward. All you need are some original images and their corresponding results from the other service. 
+</p>
+<div id="Comparison-Accordion" class="panel-group">
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<a data-toggle="collapse" href="#step-1" data-parent="#Comparison-Accordion">
+<h4 class="panel-title">
+1. Create An Account
+<span class="pull-right">
+<span class="Comparison-plus glyphicon glyphicon-plus"> </span><span class="Comparison-minus glyphicon glyphicon-minus"> </span>
+</span>
+</h4>
+</a>
+</div>
+<div id="step-1" class="in panel-collapse collapse">
+<div class="panel-body">
+<a href="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fcomparisons" class="bttn bttn_dark Signon-trigger" data-url="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fcomparisons&amp;noChrome=1">
+Create an account
+</a>
+</div>
+</div>
+</div>
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+2. Create A Workspace
+</h4>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+3. Upload Originals 
+</h4>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<a data-toggle="collapse" href="#step-4" data-parent="#Comparison-Accordion">
+<h4 class="panel-title">
+4. Upload Competitor Results 
+<span class="pull-right">
+<span class="Comparison-plus glyphicon glyphicon-plus"> </span><span class="Comparison-minus glyphicon glyphicon-minus"> </span>
+</span>
+</h4>
+</a>
+</div>
+<div id="step-4" class="in panel-collapse collapse">
+<div class="panel-body">
+<p class="comment">
+Results must start with the same filename as the corresponding original (appended text ok). 
+</p>
+<p class="comment">
+Original & result sizes must match, and the results must be transparent PNGs. 
+</p>
+</div>
+</div>
+</div>
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<a data-toggle="collapse" href="#step-5" data-parent="#Comparison-Accordion">
+<h4 class="panel-title">
+5. Pixian Processes Your Images
+<span class="pull-right">
+<span class="Comparison-plus glyphicon glyphicon-plus"> </span><span class="Comparison-minus glyphicon glyphicon-minus"> </span>
+</span>
+</h4>
+</a>
+</div>
+<div id="step-5" class="in panel-collapse collapse">
+<div class="panel-body">
+<p>
+Pixian pairs up the images, removes the background from the originals, and identifies the results with meaningful differences for your review. 
+</p>
+</div>
+</div>
+</div>
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<a data-toggle="collapse" href="#step-6" data-parent="#Comparison-Accordion">
+<h4 class="panel-title">
+6. Compare Results
+<span class="pull-right">
+<span class="Comparison-plus glyphicon glyphicon-plus"> </span><span class="Comparison-minus glyphicon glyphicon-minus"> </span>
+</span>
+</h4>
+</a>
+</div>
+<div id="step-6" class="in panel-collapse collapse">
+<div class="panel-body">
+<p>
+You review the results that differ, rating them individually good or bad, with our easy to use app. This is done in a double-blind way to ensure fairness. 
+</p>
+<p class="comment">
+You can of course review all images if you like, but focusing the review on images with meaningful differences saves work. 
+</p>
+</div>
+</div>
+</div>
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<a data-toggle="collapse" href="#step-7" data-parent="#Comparison-Accordion">
+<h4 class="panel-title">
+7. Detailed Report
+<span class="pull-right">
+<span class="Comparison-plus glyphicon glyphicon-plus"> </span><span class="Comparison-minus glyphicon glyphicon-minus"> </span>
+</span>
+</h4>
+</a>
+</div>
+<div id="step-7" class="in panel-collapse collapse">
+<div class="panel-body">
+<p>
+Pixian provides you with a detailed report of your ratings. 
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-12">
+<h2 class="c">Requirements</h2>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12 Faq-col">
+
+<div class="Faq-item">
+<h3>Filenames Must Match</h3>
+<p>
+Results can have extra text appended, but must start with the same text as the original. 
+</p>
+<table class="table">
+<thead>
+<tr>
+<th>Original</th><th>Result</th><th>Ok?</th>
+</tr>
+</thead>
+<tr>
+<td>myfile</td><td>myfile</td><td>Ok!</td>
+</tr>
+<tr>
+<td>myfile</td><td>myfile-no-bg</td><td>Ok!</td>
+</tr>
+<tr>
+<td>myfile</td><td>my-other-file-no-bg</td><td>Not ok</td>
+</tr>
+</table>
+</div>
+
+<div class="Faq-item">
+<h3>Image Sizes Must Match</h3>
+<p>
+This means you can't use previews, cropped, or scaled results for the comparison. 
+</p>
+</div>
+
+<div class="Faq-item">
+<h3>Results Must Be Transparent PNGs</h3>
+<p>
+Our current sorting process requires transparency. We may relax this requirement in the future. 
+</p>
+</div>
+
+<div class="Faq-item">
+<h3>Filenames Must Be Unique</h3>
+<p>
+If you upload two files with the same name, the one uploaded last will overwrite the first. 
+</p>
+<p>
+Originals and results are treated separately, so the pairs can have identical names. 
+</p>
+</div>
+
+<div class="Faq-item">
+<h3>Can We Be Of Assistance?</h3>
+<p>
+Please <a href="mailto:admin@pixian.ai?subject=Pixian.AI%20Comparisons%20Inquiry&amp;body=" class="b">send us an email</a>
+</p>
+</div>
+</div>
+</div>
+<div style="height: 0; width: 0; overflow: hidden;">
+<label style="position: absolute; left: 0; top: 0; z-index: -10000;">
+<span style="color: transparent;">File Picker</span>
+<input multiple="multiple" style="display: none;" id="FileInput-Field" type="file" accept="image/*">
+</label>
+</div>
+</div>
+<footer id="footer">
+<hr>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="pull-left">
+<p>
+<a href="/">Pixian.AI</a>
+</p>
+<p>
+support@<span style='display:none;'>__remove_this_part__</span>pixian.ai
+</p>
+<p>
+ &copy; <a href="https://cedarlakeventures.com">Cedar Lake Ventures, Inc.</a>
+</p>
+<p>
+<a href="https://cedarlakeventures.com/affiliates">Affiliate Program</a>
+</p>
+</div>
+<div style="margin-left: 20px;" class="pull-right">
+<p>
+<a href="/about">About</a>
+</p>
+<p>
+<a href="/policies/terms">Terms</a>
+</p>
+<p>
+<a href="/policies/privacy">Privacy</a>
+</p>
+</div>
+<div class="pull-right">
+<p>
+<a href="/api">API</a>
+</p>
+<p>
+<a href="/comparisons">Comparisons</a>
+</p>
+<p>
+<a href="/#pricing">Pricing</a>
+</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+</div>
+</div>
+</div>
+</footer>
+</body>
+
+</html>

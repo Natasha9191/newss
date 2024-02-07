@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="https://dq2gn5p12glyq.cloudfront.net/p/assets/all_401d0c4aa175d26cc10f92ff86930daa.css" type="text/css">
+<script type="text/javascript">
+var __jqdeferred=[];function $(a){__jqdeferred.push(a);}
+</script>
+
+<script type="text/javascript">
+var Globals = {"assets":[{"wildcat_jpeged":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/example-input_33347cf4f205b2986007f60306afb948.jpeg","wildcat_smoothed":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/example-output_353d139b06097fab956936e80918d3a0.jpeg","remove":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/icon-remove_c3091dfb25e040598c020978e9d78394.svg"},{"wildcat_jpeged":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/face-sticker-1-input_ad8a2d61e6c22544a761df086e51acbd.jpeg","wildcat_smoothed":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/face-sticker-1-output_9f8329f6adde396a1d6876d06024667b.jpeg","remove":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/icon-remove_c3091dfb25e040598c020978e9d78394.svg"}],"isDev":false};
+</script>
+<script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.js" integrity="sha512-vCUbejtS+HcWYtDHRF2T5B0BKwVG/CLeuew5uT2AiX4SJ2Wff52+kfgONvtdATqkqQMC9Ye5K+Td0OTaz+P7cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer src="https://dq2gn5p12glyq.cloudfront.net/p/assets/all_de05da03769edfc50afd9aef8871f3f8.js" type="text/javascript"></script>
+<script defer src="https://dq2gn5p12glyq.cloudfront.net/p/assets/m/Main.min_d7cea5e91ffa74dee8ce5c8f744dbb32.js" type="text/javascript"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pixian.AI">
+<meta name="theme-color" content="#a89db3">
+<link sizes="180x180" rel="apple-touch-icon" href="https://dq2gn5p12glyq.cloudfront.net/p/assets/m/favicons/pixian/apple-touch-icon-180_e5c5e123409b599a279b94c9a92e643f.png">
+<link sizes="32x32" rel="icon" href="https://dq2gn5p12glyq.cloudfront.net/p/assets/m/favicons/pixian/favicon-32_46dab9b5e2e7d199a3e92e0d55dbd817.png" type="image/png">
+<link sizes="any" rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%0D%0A%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill%3A%234E3764%3B%7D.cls-2%2C.cls-3%7Bfill%3A%23fff%3B%7D.cls-2%7Bopacity%3A0.51%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%0D%0A%3Ctitle%3Epixian%20logo%3C%2Ftitle%3E%0D%0A%3Crect%20class%3D%22cls-1%22%20width%3D%2216%22%20height%3D%2216%22%20rx%3D%222%22%20ry%3D%222%22%2F%3E%0D%0A%3Cg%20class%3D%22cls-2%22%3E%0D%0A%09%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%225%22%20height%3D%225%22%20rx%3D%221%22%20ry%3D%221%22%2F%3E%0D%0A%09%3Crect%20x%3D%229%22%20y%3D%222%22%20width%3D%225%22%20height%3D%225%22%20rx%3D%221%22%20ry%3D%221%22%2F%3E%0D%0A%09%3Crect%20x%3D%222%22%20y%3D%229%22%20width%3D%225%22%20height%3D%225%22%20rx%3D%221%22%20ry%3D%221%22%2F%3E%0D%0A%3C%2Fg%3E%0D%0A%3Cg%20class%3D%22cls-3%22%20transform%3D%22translate%2811.5%2011.5%29%20rotate%2845%29%22%3E%0D%0A%09%3Crect%20x%3D%22-0.5%22%20y%3D%22-3.25%22%20width%3D%221%22%20height%3D%226.5%22%20rx%3D%22.5%22%20ry%3D%22.5%22%2F%3E%0D%0A%09%3Crect%20x%3D%22-3.25%22%20y%3D%22-0.5%22%20width%3D%226.5%22%20height%3D%221%22%20rx%3D%22.5%22%20ry%3D%22.5%22%2F%3E%0D%0A%3C%2Fg%3E%0D%0A%3C%2Fsvg%3E" type="image/svg+xml">
+<link rel="manifest" href="data:application/manifest+json,%7B%22id%22%3A%22pixian-en%22%2C%22name%22%3A%22Pixian.AI%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fdq2gn5p12glyq.cloudfront.net%2Fp%2Fassets%2Fm%2Ffavicons%2Fpixian%2Ffavicon-192_02be2ae18a91166ab7753d0cd7fe627c.png%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fpng%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fdq2gn5p12glyq.cloudfront.net%2Fp%2Fassets%2Fm%2Ffavicons%2Fpixian%2Ffavicon-512_8e26713e93c727a7fe0a3d21338346ab.png%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fpng%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fdq2gn5p12glyq.cloudfront.net%2Fp%2Fassets%2Fm%2Ffavicons%2Fpixian%2Ffavicon-maskable-512_23c55bf909cc68ab340577e479257ddc.png%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fpng%22%2C%22purpose%22%3A%22maskable%22%7D%5D%2C%22start_url%22%3A%22https%3A%2F%2Fpixian.ai%2F%22%2C%22background_color%22%3A%22%23a89db3%22%2C%22description%22%3A%22Image%20Background%20Remover.%20Fully%20automatic%20background%20removal%20in%20one%20convenient%20website%20-%20just%20upload%20your%20image%20and%20get%20the%20background%20removed%20in%20seconds.%20Super%20convenient%20for%20e-commerce%20product%20shots%2C%20marketing%20materials%2C%20and%20more.%20%22%2C%22display%22%3A%22minimal-ui%22%2C%22lang%22%3A%22en%22%2C%22theme_color%22%3A%22%23a89db3%22%7D">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PJCBP7EH1" type="text/javascript"></script>
+<script type="text/javascript">
+window.dataLayer = window.dataLayer || [];
+function ga() {}
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date()); gtag('config','G-1PJCBP7EH1',{'anonymize_ip':true});
+</script>
+<script type="text/javascript">
+window.onerror = function(message, file, line) {
+  var m = '[' + file + ' (' + line + ')] ' + message + '; https:\/\/pixian.ai\/pricing ' + navigator.userAgent + '|' + navigator.vendor + '|' + navigator.platform;
+  if (!(("Script error." == message || "Script error" == message) && line == 0)) {
+    gtag('event', 'exception', {'description': m, 'fatal': false});
+  }
+};
+</script>
+
+<script type="text/javascript">
+var GlobalsEx = {"LocaleParameter":"lc=en-US","MaxMaxNumMegapixels":8,"MaxMaxNumPixels":8000000,"model":0};var I18nPhrases = {"Dropped a non-file input":"Dropped a non-file input","Original size: {0}":"Original size: {0}","Error":"Error","Failed to read image file with name: \"{0}\", and type: \"{1}\".":"Failed to read image file with name: \"{0}\", and type: \"{1}\".","Please try the latest version of one of these browsers instead: <b>{0}, {1}, {2}<\/b>.":"Please try the latest version of one of these browsers instead: <b>{0}, {1}, {2}<\/b>.","Result":"Result","Please verify your network connection.":"Please verify your network connection.","Original":"Original","Failed to send message to worker.":"Failed to send message to worker.","Unable to connect to the worker. Is your firewall or proxy blocking WebSockets?":"Unable to connect to the worker. Is your firewall or proxy blocking WebSockets?","Terribly sorry, but your browser appears to be missing key feature(s) required to use this website:":"Terribly sorry, but your browser appears to be missing key feature(s) required to use this website:","Pasted something that wasn't an image or URL?":"Pasted something that wasn't an image or URL?","Unexpected disconnection from the server.":"Unexpected disconnection from the server.","Unsupported Browser":"Unsupported Browser","Unexpected worker disconnection.":"Unexpected worker disconnection.","Failed to fetch \"{0}\"":"Failed to fetch \"{0}\"","Retrying now...":"Retrying now...","Failed to upload the image: {0}":"Failed to upload the image: {0}","Connect to worker":"Connect to worker","Terribly sorry, but that file is too large to process. Please try another.":"Terribly sorry, but that file is too large to process. Please try another.","Failed to connect to the server.":"Failed to connect to the server.","Retrying in {0} {0,plural,one{second}other{seconds}}...":"Retrying in {0} {0,plural,one{second}other{seconds}}...","Task":"Task","Pasted a non-file input":"Pasted a non-file input"};
+</script>
+<meta property="og:image" content="https://dq2gn5p12glyq.cloudfront.net/p/assets/images/example-og-image_75009c3699bf4696de1d452906c49ac7.jpeg">
+<title>Remove Background from Image, Free HD, No Signup - Pixian.AI</title>
+<script type="text/javascript">
+var GlobalsShared = {"locale":"en-US","localeQueryParameter":"lc"};
+</script>
+<!-- pixian-7b047dd936c3120e46727764ae3c10a16b6a46f5-332078aad7d626a1d0767927b5e4eac96004ede5-445df96af192f0acf23586e9e7c664ce -->
+</head>
+
+<body id="main">
+<div class="top-section hidden-print">
+<div class="YoNavbar-outer_container">
+<div class="YoNavbar-container container ">
+<div class="YoNavbar-language_bar">
+</div>
+<div class="YoNavbar-table">
+<ul class="YoNavbar-navbar YoNavbar-left">
+<li style="padding-left: 5px;">
+<a href="/" class="YoNavbar-brand">
+<div class="svg-icon">
+<img src="https://dq2gn5p12glyq.cloudfront.net/p/assets/images/logo_20243d2bf2c0dba61b56e66cb5c4b50e.svg" importance="low" decode="async" loading="lazy">
+</div>
+<span class="YoNavbar-logo_text">
+Pixian.AI
+<sup class="i">
+<small>Beta</small>
+</sup>
+</span>
+</a>
+</li>
+</ul>
+<ul class="YoNavbar-navbar YoNavbar-middle_left">
+
+<li>
+<a href="/api" class>API</a>
+</li>
+
+<li class="hidden-xs">
+<a href="/#quality" class>Comparisons</a>
+</li>
+
+<li class="active">
+<a href="/pricing" class>Pricing</a>
+</li>
+
+<li>
+<a href="/support" class>Support</a>
+</li>
+
+<li>
+<a href="/face-stickers" class>Face Stickers</a>
+</li>
+</ul>
+<ul class="YoNavbar-navbar YoNavbar-middle"></ul>
+<ul class="YoNavbar-navbar YoNavbar-middle_right">
+</ul>
+<ul class="YoNavbar-navbar YoNavbar-right">
+<li>
+<a href="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fpricing" class="Signon-trigger" data-url="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fpricing&amp;noChrome=1">Create Account</a>
+</li>
+<li>
+<a href="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fpricing&amp;email=" class="Signon-trigger" data-url="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fpricing&amp;email=&amp;noChrome=1">Log In</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+</div>
+</div>
+<div class="container">
+
+<div class="row">
+<div class="col-md-12">
+<div style="display: none;" id="App-ModernizrAlert" class="alert alert-danger">
+</div>
+</div>
+</div>
+
+<div class="white-panel">
+<div class="row">
+<div class="col-md-12">
+<div class="page-header">
+<h1>
+Pricing 
+</h1>
+</div>
+<div class="two_col">
+<p>
+Pixian.AI offers both a Web App and an API. 
+</p>
+<p>
+While the Web App is free to use, the API requires buying a credit pack. 
+</p>
+</div>
+</div>
+</div>
+<div class="dropdown r">
+<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+Currency: USD <b class="caret"></b>
+</a>
+<ul class="dropdown-menu dropdown-menu-right modern_menu">
+<li class="active">
+<a onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href; f.target = this.target; f.submit();return false;" href="/setCurrency?currency=USD">USD, United States Dollar</a>
+</li>
+<li>
+<a onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href; f.target = this.target; f.submit();return false;" href="/setCurrency?currency=EUR">EUR, Euro</a>
+</li>
+</ul>
+</div>
+<div style="margin-top: 20px;" class="row pricing_wrapper">
+<div class="col-md-12 Pricing-cards">
+<div class="Pricing-card">
+<div class="Pricing-header">
+<h3>
+Free 
+</h3>
+</div>
+<div class="Pricing-body">
+<ul>
+<li>Limited use</li><li>2 megapixels resolution</li><li>Website only</li>
+</ul>
+</div>
+</div>
+<div class="Pricing-card">
+<div class="Pricing-header">
+<h3>
+PAYGO<small>1 Image = 0.05 to 1 Credits</small>
+</h3>
+</div>
+<div class="Pricing-body">
+<ul>
+<li>Resolution-based pricing</li><li>No monthly fees or minimums</li><li>25 megapixels resolution</li><li>Website &amp; API</li>
+</ul>
+<form method="GET" action="/credits/signonBeforeBuying" style="width: 100%;">
+<table style="font-size: small; white-space: nowrap;" class="hide_high_volume_plans table table-striped table-hover r table-condensed">
+<thead>
+<tr>
+<th colspan="2" class="r">Credits</th><th class="r">Price</th><th class="r">Price/Credit</th>
+</tr>
+</thead>
+<tr onclick="document.getElementById('paygo_500m_250').checked = true; $('#SubscribeButton').addClass('switching_plan').removeClass('renewing_early'); ">
+<td>
+<input name="pack" checked="true" id="paygo_500m_250" type="radio" value="paygo_500m_250">
+</td>
+<td>
+250
+</td>
+<td>
+$5.00
+</td>
+<td>
+$0.0200
+</td>
+</tr>
+<tr onclick="document.getElementById('paygo_950m_500').checked = true; $('#SubscribeButton').addClass('switching_plan').removeClass('renewing_early'); ">
+<td>
+<input name="pack" id="paygo_950m_500" type="radio" value="paygo_950m_500">
+</td>
+<td>
+500
+</td>
+<td>
+$9.50
+</td>
+<td>
+$0.0190
+</td>
+</tr>
+<tr onclick="document.getElementById('paygo_1860m_1000').checked = true; $('#SubscribeButton').addClass('switching_plan').removeClass('renewing_early'); ">
+<td>
+<input name="pack" id="paygo_1860m_1000" type="radio" value="paygo_1860m_1000">
+</td>
+<td>
+1,000
+</td>
+<td>
+$18.60
+</td>
+<td>
+$0.0186
+</td>
+</tr>
+<tr onclick="document.getElementById('paygo_4500m_2500').checked = true; $('#SubscribeButton').addClass('switching_plan').removeClass('renewing_early'); ">
+<td>
+<input name="pack" id="paygo_4500m_2500" type="radio" value="paygo_4500m_2500">
+</td>
+<td>
+2,500
+</td>
+<td>
+$45.00
+</td>
+<td>
+$0.0180
+</td>
+</tr>
+<tr onclick="document.getElementById('paygo_8500m_5000').checked = true; $('#SubscribeButton').addClass('switching_plan').removeClass('renewing_early'); ">
+<td>
+<input name="pack" id="paygo_8500m_5000" type="radio" value="paygo_8500m_5000">
+</td>
+<td>
+5,000
+</td>
+<td>
+$85.00
+</td>
+<td>
+$0.0170
+</td>
+</tr>
+<tr onclick="document.getElementById('paygo_16600m_10000').checked = true; $('#SubscribeButton').addClass('switching_plan').removeClass('renewing_early'); " class="high_volume_plan">
+<td>
+<input name="pack" id="paygo_16600m_10000" type="radio" value="paygo_16600m_10000">
+</td>
+<td>
+10,000
+</td>
+<td>
+$166.00
+</td>
+<td>
+$0.0166
+</td>
+</tr>
+<tr onclick="document.getElementById('paygo_40000m_25000').checked = true; $('#SubscribeButton').addClass('switching_plan').removeClass('renewing_early'); " class="high_volume_plan">
+<td>
+<input name="pack" id="paygo_40000m_25000" type="radio" value="paygo_40000m_25000">
+</td>
+<td>
+25,000
+</td>
+<td>
+$400.00
+</td>
+<td>
+$0.0160
+</td>
+</tr>
+<tr onclick="document.getElementById('paygo_75000m_50000').checked = true; $('#SubscribeButton').addClass('switching_plan').removeClass('renewing_early'); " class="high_volume_plan">
+<td>
+<input name="pack" id="paygo_75000m_50000" type="radio" value="paygo_75000m_50000">
+</td>
+<td>
+50,000
+</td>
+<td>
+$750.00
+</td>
+<td>
+$0.0150
+</td>
+</tr>
+<tr onclick="document.getElementById('paygo_146000m_100000').checked = true; $('#SubscribeButton').addClass('switching_plan').removeClass('renewing_early'); " class="high_volume_plan">
+<td>
+<input name="pack" id="paygo_146000m_100000" type="radio" value="paygo_146000m_100000">
+</td>
+<td>
+100,000
+</td>
+<td>
+$1,460.00
+</td>
+<td>
+$0.0146
+</td>
+</tr>
+<tr onclick="document.getElementById('paygo_350000m_250000').checked = true; $('#SubscribeButton').addClass('switching_plan').removeClass('renewing_early'); " class="high_volume_plan">
+<td>
+<input name="pack" id="paygo_350000m_250000" type="radio" value="paygo_350000m_250000">
+</td>
+<td>
+250,000
+</td>
+<td>
+$3,500.00
+</td>
+<td>
+$0.0140
+</td>
+</tr>
+<tr onclick="document.getElementById('paygo_650000m_500000').checked = true; $('#SubscribeButton').addClass('switching_plan').removeClass('renewing_early'); " class="high_volume_plan">
+<td>
+<input name="pack" id="paygo_650000m_500000" type="radio" value="paygo_650000m_500000">
+</td>
+<td>
+500,000
+</td>
+<td>
+$6,500.00
+</td>
+<td>
+$0.0130
+</td>
+</tr>
+</table>
+<div style="position: relative; top: -17px;" class="high_volume_plan_disclosure comment">
+<a onclick="$('.hide_high_volume_plans').removeClass('hide_high_volume_plans'); $('.high_volume_plan_disclosure').hide(); return false;" href="#">Show more options</a>
+</div>
+<button id="SubscribeButton" type="submit" class="bttn bttn_dark">Buy Credit Pack</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-top: 42px;" class="fpMainSection white-panel two_col">
+
+<div class="no_col_break faqItem">
+<h4>Do my credits expire?</h4>
+<p>
+Credits do not expire, but you must have made a purchase in the last two years to use them. 
+</p>
+</div>
+
+<div class="no_col_break faqItem">
+<h4>How much does an image cost? </h4>
+<p>
+The formula is constructed such that a 0.25 MPx image is 0.05 credits and a 25 MPx image is 1 credit, with proportional pricing in between. 
+</p>
+<p>
+Here's a table of some example image sizes and their corresponding credit cost, together with the effective price per image for the smallest credit pack: 
+</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th class="r">MPx</th><th class="c">Credits</th><th>Price/Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r">
+0.25
+</td>
+<td class="c">
+0.050
+</td>
+<td>
+$0.0010
+</td>
+</tr>
+<tr>
+<td class="r">
+0.50
+</td>
+<td class="c">
+0.060
+</td>
+<td>
+$0.0012
+</td>
+</tr>
+<tr>
+<td class="r">
+1.00
+</td>
+<td class="c">
+0.079
+</td>
+<td>
+$0.0016
+</td>
+</tr>
+<tr>
+<td class="r">
+2.00
+</td>
+<td class="c">
+0.117
+</td>
+<td>
+$0.0023
+</td>
+</tr>
+<tr>
+<td class="r">
+4.00
+</td>
+<td class="c">
+0.194
+</td>
+<td>
+$0.0039
+</td>
+</tr>
+<tr>
+<td class="r">
+8.00
+</td>
+<td class="c">
+0.347
+</td>
+<td>
+$0.0069
+</td>
+</tr>
+<tr>
+<td class="r">
+12.00
+</td>
+<td class="c">
+0.501
+</td>
+<td>
+$0.0100
+</td>
+</tr>
+<tr>
+<td class="r">
+16.00
+</td>
+<td class="c">
+0.655
+</td>
+<td>
+$0.0131
+</td>
+</tr>
+<tr>
+<td class="r">
+20.00
+</td>
+<td class="c">
+0.808
+</td>
+<td>
+$0.0162
+</td>
+</tr>
+<tr>
+<td class="r">
+25.00
+</td>
+<td class="c">
+1.000
+</td>
+<td>
+$0.0200
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+Larger credit packs yield even lower prices per image. 
+</p>
+<p>
+The precise pricing formula is: 
+</p>
+<p>
+<code>mpx = max(width, 500) * max(height, 500) * 1e-6</code>
+<br><code>mpx = max(0, mpx - min_mpx)</code>
+<br><code>credits = per_request + per_mpx * mpx</code>
+<br><code>credits = min(max_credits, credits)</code>
+</p>
+<p>
+Where: 
+<br><code>width, height = width, height of image in pixels</code>
+<br><code>min_mpx = 0.25</code>
+<br><code>per_request = 0.05</code>
+<br><code>per_mpx = ((1.0 - 0.05) / (25.0 - 0.25))</code>
+<br><code>max_credits = 1.0</code>
+</p>
+</div>
+
+<div class="no_col_break faqItem">
+<h4>Why are your prices so much lower than the competition?</h4>
+<p>
+Their margin is our opportunity. 
+</p>
+<p>
+We see AI commoditizing rapidly, and rather than fighting that tide we've decided to embrace it. 
+</p>
+<p>
+This thinking has impacted every aspect of our business. The size of our team, the choice of AI model, the architecture of our IT operations. We've optimized them all towards maximizing quality and minimizing price. 
+</p>
+<p>
+So we don't have a 50 person sales team to wine and dine you (and at those margins they really should be!) All we're offering is a great service and outstanding value. 
+</p>
+</div>
+
+<div class="no_col_break faqItem">
+<h4>What payment options do I have?</h4>
+<p>
+We accept all major credit cards and PayPal. We do not accept purchase orders and do not issue invoices. 
+</p>
+</div>
+
+<div class="no_col_break faqItem">
+<h4>Can I integrate with the API for free?</h4>
+<p>
+<b>
+Yes! 
+</b>
+It is free to integrate with and test out the API, no purchase required. <a href="/api#pricing">Details</a>
+</p>
+</div>
+
+<div class="no_col_break faqItem">
+<h4>Do you offer special pricing for Academic or Non-profit users?</h4><p> Sorry, but we do not offer special pricing for Academic Institutions or Non-profits. </p>
+</div>
+
+<div class="no_col_break faqItem">
+<h4>Fine Print</h4>
+<p>
+If you're unable to log into your account, please <a href="/support">contact support</a> and we will help you out. 
+</p>
+<p>Credit pack purchases are non-refundable. </p><p>Access is granted immediately after purchasing. </p><p>Credit packs are personal and cannot be shared. </p>
+</div>
+</div>
+</div>
+<footer id="footer">
+<hr>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="pull-left">
+<p>
+<a href="/">Pixian.AI</a>
+</p>
+<p>
+support@<span style='display:none;'>__remove_this_part__</span>pixian.ai
+</p>
+<p>
+ &copy; <a href="https://cedarlakeventures.com">Cedar Lake Ventures, Inc.</a>
+</p>
+<p>
+<a href="https://cedarlakeventures.com/affiliates">Affiliate Program</a>
+</p>
+</div>
+<div style="margin-left: 20px;" class="pull-right">
+<p>
+<a href="/about">About</a>
+</p>
+<p>
+<a href="/policies/terms">Terms</a>
+</p>
+<p>
+<a href="/policies/privacy">Privacy</a>
+</p>
+</div>
+<div class="pull-right">
+<p>
+<a href="/api">API</a>
+</p>
+<p>
+<a href="/comparisons">Comparisons</a>
+</p>
+<p>
+<a href="/#pricing">Pricing</a>
+</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+</div>
+</div>
+</div>
+</footer>
+</body>
+
+</html>

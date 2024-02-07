@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<!-- Mirrored from pixian.ai/api by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Feb 2024 05:59:29 GMT -->
+<head>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="../dq2gn5p12glyq.cloudfront.net/p/assets/all_401d0c4aa175d26cc10f92ff86930daa.css" type="text/css">
+<script type="text/javascript">
+var __jqdeferred=[];function $(a){__jqdeferred.push(a);}
+</script>
+
+<script type="text/javascript">
+var Globals = {"assets":[{"wildcat_jpeged":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/example-input_33347cf4f205b2986007f60306afb948.jpeg","wildcat_smoothed":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/example-output_353d139b06097fab956936e80918d3a0.jpeg","remove":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/icon-remove_c3091dfb25e040598c020978e9d78394.svg"},{"wildcat_jpeged":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/face-sticker-1-input_ad8a2d61e6c22544a761df086e51acbd.jpeg","wildcat_smoothed":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/face-sticker-1-output_9f8329f6adde396a1d6876d06024667b.jpeg","remove":"https:\/\/dq2gn5p12glyq.cloudfront.net\/p\/assets\/images\/icon-remove_c3091dfb25e040598c020978e9d78394.svg"}],"isDev":false};
+</script>
+<script defer="" src="../cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.js" integrity="sha512-vCUbejtS+HcWYtDHRF2T5B0BKwVG/CLeuew5uT2AiX4SJ2Wff52+kfgONvtdATqkqQMC9Ye5K+Td0OTaz+P7cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script defer src="../dq2gn5p12glyq.cloudfront.net/p/assets/all_de05da03769edfc50afd9aef8871f3f8.js" type="text/javascript"></script>
+<script defer src="../dq2gn5p12glyq.cloudfront.net/p/assets/m/Main.min_d7cea5e91ffa74dee8ce5c8f744dbb32.js" type="text/javascript"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pixian.AI">
+<meta name="theme-color" content="#a89db3">
+<link sizes="180x180" rel="apple-touch-icon" href="../dq2gn5p12glyq.cloudfront.net/p/assets/m/favicons/pixian/apple-touch-icon-180_e5c5e123409b599a279b94c9a92e643f.png">
+<link sizes="32x32" rel="icon" href="../dq2gn5p12glyq.cloudfront.net/p/assets/m/favicons/pixian/favicon-32_46dab9b5e2e7d199a3e92e0d55dbd817.png" type="image/png">
+<link sizes="any" rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%0D%0A%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill%3A%234E3764%3B%7D.cls-2%2C.cls-3%7Bfill%3A%23fff%3B%7D.cls-2%7Bopacity%3A0.51%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%0D%0A%3Ctitle%3Epixian%20logo%3C%2Ftitle%3E%0D%0A%3Crect%20class%3D%22cls-1%22%20width%3D%2216%22%20height%3D%2216%22%20rx%3D%222%22%20ry%3D%222%22%2F%3E%0D%0A%3Cg%20class%3D%22cls-2%22%3E%0D%0A%09%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%225%22%20height%3D%225%22%20rx%3D%221%22%20ry%3D%221%22%2F%3E%0D%0A%09%3Crect%20x%3D%229%22%20y%3D%222%22%20width%3D%225%22%20height%3D%225%22%20rx%3D%221%22%20ry%3D%221%22%2F%3E%0D%0A%09%3Crect%20x%3D%222%22%20y%3D%229%22%20width%3D%225%22%20height%3D%225%22%20rx%3D%221%22%20ry%3D%221%22%2F%3E%0D%0A%3C%2Fg%3E%0D%0A%3Cg%20class%3D%22cls-3%22%20transform%3D%22translate%2811.5%2011.5%29%20rotate%2845%29%22%3E%0D%0A%09%3Crect%20x%3D%22-0.5%22%20y%3D%22-3.25%22%20width%3D%221%22%20height%3D%226.5%22%20rx%3D%22.5%22%20ry%3D%22.5%22%2F%3E%0D%0A%09%3Crect%20x%3D%22-3.25%22%20y%3D%22-0.5%22%20width%3D%226.5%22%20height%3D%221%22%20rx%3D%22.5%22%20ry%3D%22.5%22%2F%3E%0D%0A%3C%2Fg%3E%0D%0A%3C%2Fsvg%3E" type="image/svg+xml">
+<link rel="manifest" href="data:application/manifest+json,%7B%22id%22%3A%22pixian-en%22%2C%22name%22%3A%22Pixian.AI%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fdq2gn5p12glyq.cloudfront.net%2Fp%2Fassets%2Fm%2Ffavicons%2Fpixian%2Ffavicon-192_02be2ae18a91166ab7753d0cd7fe627c.png%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fpng%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fdq2gn5p12glyq.cloudfront.net%2Fp%2Fassets%2Fm%2Ffavicons%2Fpixian%2Ffavicon-512_8e26713e93c727a7fe0a3d21338346ab.png%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fpng%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fdq2gn5p12glyq.cloudfront.net%2Fp%2Fassets%2Fm%2Ffavicons%2Fpixian%2Ffavicon-maskable-512_23c55bf909cc68ab340577e479257ddc.png%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fpng%22%2C%22purpose%22%3A%22maskable%22%7D%5D%2C%22start_url%22%3A%22https%3A%2F%2Fpixian.ai%2F%22%2C%22background_color%22%3A%22%23a89db3%22%2C%22description%22%3A%22Image%20Background%20Remover.%20Fully%20automatic%20background%20removal%20in%20one%20convenient%20website%20-%20just%20upload%20your%20image%20and%20get%20the%20background%20removed%20in%20seconds.%20Super%20convenient%20for%20e-commerce%20product%20shots%2C%20marketing%20materials%2C%20and%20more.%20%22%2C%22display%22%3A%22minimal-ui%22%2C%22lang%22%3A%22en%22%2C%22theme_color%22%3A%22%23a89db3%22%7D">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PJCBP7EH1" type="text/javascript"></script>
+<script type="text/javascript">
+window.dataLayer = window.dataLayer || [];
+function ga() {}
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date()); gtag('config','G-1PJCBP7EH1',{'anonymize_ip':true});
+</script>
+<script type="text/javascript">
+window.onerror = function(message, file, line) {
+  var m = '[' + file + ' (' + line + ')] ' + message + '; https:\/\/pixian.ai\/api ' + navigator.userAgent + '|' + navigator.vendor + '|' + navigator.platform;
+  if (!(("Script error." == message || "Script error" == message) && line == 0)) {
+    gtag('event', 'exception', {'description': m, 'fatal': false});
+  }
+};
+</script>
+
+<script type="text/javascript">
+var GlobalsEx = {"LocaleParameter":"lc=en-US","MaxMaxNumMegapixels":8,"MaxMaxNumPixels":8000000,"model":0};var I18nPhrases = {"Dropped a non-file input":"Dropped a non-file input","Original size: {0}":"Original size: {0}","Error":"Error","Failed to read image file with name: \"{0}\", and type: \"{1}\".":"Failed to read image file with name: \"{0}\", and type: \"{1}\".","Please try the latest version of one of these browsers instead: <b>{0}, {1}, {2}<\/b>.":"Please try the latest version of one of these browsers instead: <b>{0}, {1}, {2}<\/b>.","Result":"Result","Please verify your network connection.":"Please verify your network connection.","Original":"Original","Failed to send message to worker.":"Failed to send message to worker.","Unable to connect to the worker. Is your firewall or proxy blocking WebSockets?":"Unable to connect to the worker. Is your firewall or proxy blocking WebSockets?","Terribly sorry, but your browser appears to be missing key feature(s) required to use this website:":"Terribly sorry, but your browser appears to be missing key feature(s) required to use this website:","Pasted something that wasn't an image or URL?":"Pasted something that wasn't an image or URL?","Unexpected disconnection from the server.":"Unexpected disconnection from the server.","Unsupported Browser":"Unsupported Browser","Unexpected worker disconnection.":"Unexpected worker disconnection.","Failed to fetch \"{0}\"":"Failed to fetch \"{0}\"","Retrying now...":"Retrying now...","Failed to upload the image: {0}":"Failed to upload the image: {0}","Connect to worker":"Connect to worker","Terribly sorry, but that file is too large to process. Please try another.":"Terribly sorry, but that file is too large to process. Please try another.","Failed to connect to the server.":"Failed to connect to the server.","Retrying in {0} {0,plural,one{second}other{seconds}}...":"Retrying in {0} {0,plural,one{second}other{seconds}}...","Task":"Task","Pasted a non-file input":"Pasted a non-file input"};
+</script>
+<meta property="og:image" content="https://dq2gn5p12glyq.cloudfront.net/p/assets/images/example-og-image_75009c3699bf4696de1d452906c49ac7.jpeg">
+<title>Image Background Removal API - Pixian.AI</title>
+<script type="text/javascript">
+var GlobalsShared = {"locale":"en-US","localeQueryParameter":"lc"};
+</script>
+<!-- pixian-7b047dd936c3120e46727764ae3c10a16b6a46f5-332078aad7d626a1d0767927b5e4eac96004ede5-445df96af192f0acf23586e9e7c664ce -->
+</head>
+
+<body id="main">
+<div class="top-section hidden-print">
+<div class="YoNavbar-outer_container">
+<div class="YoNavbar-container container ">
+<div class="YoNavbar-language_bar">
+</div>
+<div class="YoNavbar-table">
+<ul class="YoNavbar-navbar YoNavbar-left">
+<li style="padding-left: 5px;">
+<a href="index.html" class="YoNavbar-brand">
+<div class="svg-icon">
+<img src="https://dq2gn5p12glyq.cloudfront.net/p/assets/images/logo_20243d2bf2c0dba61b56e66cb5c4b50e.svg" importance="low" decode="async" loading="lazy">
+</div>
+<span class="YoNavbar-logo_text">
+Pixian.AI
+<sup class="i">
+<small>Beta</small>
+</sup>
+</span>
+</a>
+</li>
+</ul>
+<ul class="YoNavbar-navbar YoNavbar-middle_left">
+
+<li class="active">
+<a href="api.html" class>API</a>
+</li>
+
+<li class="hidden-xs">
+<a href="index.html#quality" class>Comparisons</a>
+</li>
+
+<li>
+<a href="pricing.html" class>Pricing</a>
+</li>
+
+<li>
+<a href="support.html" class>Support</a>
+</li>
+
+<li>
+<a href="face-stickers.html" class>Face Stickers</a>
+</li>
+</ul>
+<ul class="YoNavbar-navbar YoNavbar-middle"></ul>
+<ul class="YoNavbar-navbar YoNavbar-middle_right">
+</ul>
+<ul class="YoNavbar-navbar YoNavbar-right">
+<li>
+<a href="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fapi" class="Signon-trigger" data-url="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fapi&amp;noChrome=1">Create Account</a>
+</li>
+<li>
+<a href="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fapi&amp;email=" class="Signon-trigger" data-url="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fapi&amp;email=&amp;noChrome=1">Log In</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+</div>
+</div>
+<div class="container">
+
+<div class="row">
+<div class="col-md-12">
+<div style="display: none;" id="App-ModernizrAlert" class="alert alert-danger">
+</div>
+</div>
+</div>
+
+<div class="row Tutorials-main_container">
+<div class="col-md-3 Tutorials-sidebar">
+<div class="VerticalNav-sticky">
+<ul class="VerticalNav-nav">
+<li class="active">
+<a href="api.html">Overview</a>
+<ul>
+<li>
+<a href="#quickstart">Quickstart</a>
+</li>
+<li>
+<a href="#pricing">Pricing</a>
+</li>
+<li>
+<a href="#authentication-and-security">Authentication &amp; Security</a>
+</li>
+<li>
+<a href="#rate-limiting">Rate Limiting</a>
+</li>
+<li>
+<a href="#error-json">Error JSON</a>
+</li>
+<li>
+<a href="#delta-png">Delta PNG Format</a>
+</li>
+<li>
+<a href="#remove-background">Remove Background</a>
+</li>
+<li>
+<a href="#changelog">Changelog</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="api/deltaPng.html">Delta PNG Format</a>
+</li>
+<li>
+<a href="api/migrate.html">Migrating</a>
+</li>
+<li>
+<a href="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fapi" data-header="Please Create An Account or Log In to Create an API Key" class="Signon-trigger" data-url="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fapi&amp;noChrome=1">Get API Key</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-md-9 Tutorials-body">
+<h1>
+Pixian Remove Image Background API 
+</h1>
+<p>
+Pixian.AI offers a full-fledged image background removal API. The API removes image backgrounds fully automatically and with best-in-class fidelity. 
+</p>
+<div style="width: 250px; margin: 30px auto;">
+<a href="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fapi" data-header="Please Create An Account or Log In to Create an API Key" class="Signon-trigger bttn bttn_dark" data-url="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fapi&amp;noChrome=1">Get API Key</a>
+</div>
+<h3 id="quickstart">
+Quickstart
+</h3>
+<p>
+POST a bitmap image and get a background-removed result back: 
+</p>
+<ul class="nav nav-pills nav_pills_tight pull-right">
+<li class="active">
+<a data-toggle="tab" data-tab="tab-file" href="#image-file-0" class="tabLink tab-file">File</a>
+</li>
+<li>
+<a data-toggle="tab" data-tab="tab-url" href="#image-url-0" class="tabLink tab-url">URL</a>
+</li>
+</ul>
+<div style="margin-bottom: 20px;" class="tab-content">
+<div id="image-file-0" class="active tab-pane">
+<ul class="nav nav-pills nav_pills_tight">
+<li class="active">
+<a data-toggle="tab" data-tab="tab-" href="#-1" class="tabLink tab-">cURL</a>
+</li>
+<li>
+<a data-toggle="tab" data-tab="tab-java" href="#java-1" class="tabLink tab-java">Java</a>
+</li>
+<li>
+<a data-toggle="tab" data-tab="tab-csharp" href="#csharp-1" class="tabLink tab-csharp">.NET</a>
+</li>
+<li>
+<a data-toggle="tab" data-tab="tab-js" href="#js-1" class="tabLink tab-js">Node.js</a>
+</li>
+<li>
+<a data-toggle="tab" data-tab="tab-php" href="#php-1" class="tabLink tab-php">PHP</a>
+</li>
+<li>
+<a data-toggle="tab" data-tab="tab-python" href="#python-1" class="tabLink tab-python">Python</a>
+</li>
+<li>
+<a data-toggle="tab" data-tab="tab-ruby" href="#ruby-1" class="tabLink tab-ruby">Ruby</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="-1" class="active tab-pane">
+<pre class="prettyprint">$ curl https://api.pixian.ai/api/v2/remove-background \
+ -u xyz123:[secret] \
+ -F image=@example.jpeg \
+ -o pixian_result.png
+</pre>
+</div>
+<div id="java-1" class="tab-pane">
+<pre class="prettyprint lang-java">// Requires: org.apache.httpcomponents.client5:httpclient5-fluent
+
+Request request = Request.post(&quot;https://api.pixian.ai/api/v2/remove-background&quot;)
+   .addHeader(&quot;Authorization&quot;, &quot;Basic cHh4YmJ6Yjk2bjJ3OGFtOltzZWNyZXRd&quot;)
+   .body(
+      MultipartEntityBuilder.create()
+         .addBinaryBody(&quot;image&quot;, new File(&quot;example.jpeg&quot;)) // TODO: Replace with your image
+         // TODO: Add more upload parameters here
+         .build()
+      );
+ClassicHttpResponse response = (ClassicHttpResponse) request.execute().returnResponse();
+
+if (response.getCode() == 200) {
+   // Write result to disk, TODO: or wherever you&#39;d like
+   try (FileOutputStream out = new FileOutputStream(&quot;pixian_result.png&quot;)) {
+      response.getEntity().writeTo(out);
+   }
+} else {
+   System.out.println(&quot;Request Failed: Status: &quot; + response.getCode() + &quot;, Reason: &quot; + response.getReasonPhrase());
+}
+</pre>
+</div>
+<div id="csharp-1" class="tab-pane">
+<pre class="prettyprint lang-csharp">using (var client = new HttpClient())
+using (var form = new MultipartFormDataContent())
+{
+   client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(&quot;Basic&quot;, &quot;INSERT_API_KEY_HERE&quot;);
+   form.Add(new ByteArrayContent(File.ReadAllBytes(&quot;example.jpeg&quot;)), &quot;image&quot;, &quot;example.jpeg&quot;); // TODO: Replace with your image
+   // TODO: Add more upload parameters here
+
+   var response = client.PostAsync(&quot;https://api.pixian.ai/api/v2/remove-background&quot;, form).Result;
+
+   if (response.IsSuccessStatusCode)
+   {
+      // Write result to disk, TODO: or wherever you&#39;d like
+      FileStream outStream = new FileStream(&quot;pixian_result.png&quot;, FileMode.Create, FileAccess.Write, FileShare.None);
+      response.Content.CopyToAsync(outStream).ContinueWith((copyTask) =&gt; { outStream.Close(); });
+   }
+   else
+   {
+       Console.WriteLine(&quot;Request Failed: Status: &quot; + response.StatusCode + &quot;, Reason: &quot; + response.ReasonPhrase);
+   }
+}
+</pre>
+</div>
+<div id="js-1" class="tab-pane">
+<pre class="prettyprint lang-js">
+// Requires &quot;request&quot; to be installed (see https://www.npmjs.com/package/request)
+var request = require(&#39;request&#39;);
+var fs = require(&#39;fs&#39;);
+
+request.post({
+  url: &#39;https://api.pixian.ai/api/v2/remove-background&#39;,
+  formData: {
+    image: fs.createReadStream(&#39;example.jpeg&#39;), // TODO: Replace with your image
+    // TODO: Add more upload options here
+  },
+  auth: {user: &#39;xyz123&#39;, pass: &#39;[secret]&#39;},
+  followAllRedirects: true,
+  encoding: null
+}, function(error, response, body) {
+  if (error) {
+    console.error(&#39;Request failed:&#39;, error);
+  } else if (!response || response.statusCode != 200) {
+    console.error(&#39;Error:&#39;, response &amp;&amp; response.statusCode, body.toString(&#39;utf8&#39;));
+  } else {
+    // Save result
+    fs.writeFileSync(&quot;pixian_result.png&quot;, body);
+  }
+});
+</pre>
+</div>
+<div id="php-1" class="tab-pane">
+<pre class="prettyprint lang-php">$ch = curl_init(&#39;https://api.pixian.ai/api/v2/remove-background&#39;);
+
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER,
+    array(&#39;Authorization: Basic cHh4YmJ6Yjk2bjJ3OGFtOltzZWNyZXRd&#39;));
+curl_setopt($ch, CURLOPT_POSTFIELDS,
+    array(
+      &#39;image&#39; =&gt; curl_file_create(&#39;example.jpeg&#39;),
+      // TODO: Add more upload options here
+    ));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+$data = curl_exec($ch);
+if (curl_getinfo($ch, CURLINFO_HTTP_CODE) == 200) {
+  // Save result
+  file_put_contents(&quot;pixian_result.png&quot;, $data);
+} else {
+  echo &quot;Error: &quot; . $data;
+}
+curl_close($ch);</pre>
+</div>
+<div id="python-1" class="tab-pane">
+<pre class="prettyprint lang-python"># Requires &quot;requests&quot; to be installed (see https://pypi.org/project/requests/)
+import requests
+
+response = requests.post(
+    &#39;https://api.pixian.ai/api/v2/remove-background&#39;,
+    files={&#39;image&#39;: open(&#39;example.jpeg&#39;, &#39;rb&#39;)},
+    data={
+        # TODO: Add more upload options here
+    },
+    auth=(&#39;xyz123&#39;, &#39;[secret]&#39;)
+)
+if response.status_code == requests.codes.ok:
+    # Save result
+    with open(&#39;pixian_result.png&#39;, &#39;wb&#39;) as out:
+        out.write(response.content)
+else:
+    print(&quot;Error:&quot;, response.status_code, response.text)
+</pre>
+</div>
+<div id="ruby-1" class="tab-pane">
+<pre class="prettyprint lang-ruby"># Requires: gem install httpclient
+require &#39;httpclient&#39;
+
+client = HTTPClient.new default_header: {
+  &quot;Authorization&quot; =&gt; &quot;Basic cHh4YmJ6Yjk2bjJ3OGFtOltzZWNyZXRd&quot;
+}
+
+response = client.post(&quot;https://api.pixian.ai/api/v2/remove-background&quot;, {
+  &quot;image&quot; =&gt; File.open(&quot;example.jpeg&quot;, &quot;rb&quot;), # TODO: Replace with your image
+  # TODO: Add more upload parameters here
+})
+
+if response.status == 200 then
+  # Write result to disk, TODO: or wherever you&#39;d like
+  File.open(&quot;pixian_result.png&quot;, &#39;w&#39;) { |file| file.write(response.body) }
+else
+  puts &quot;Error: Code: &quot; + response.status.to_s + &quot;, Reason: &quot; + response.reason
+end
+</pre>
+</div>
+</div>
+</div>
+<div id="image-url-0" class="tab-pane">
+<ul class="nav nav-pills nav_pills_tight">
+<li class="active">
+<a data-toggle="tab" data-tab="tab-" href="#-2" class="tabLink tab-">cURL</a>
+</li>
+<li>
+<a data-toggle="tab" data-tab="tab-java" href="#java-2" class="tabLink tab-java">Java</a>
+</li>
+<li>
+<a data-toggle="tab" data-tab="tab-csharp" href="#csharp-2" class="tabLink tab-csharp">.NET</a>
+</li>
+<li>
+<a data-toggle="tab" data-tab="tab-js" href="#js-2" class="tabLink tab-js">Node.js</a>
+</li>
+<li>
+<a data-toggle="tab" data-tab="tab-php" href="#php-2" class="tabLink tab-php">PHP</a>
+</li>
+<li>
+<a data-toggle="tab" data-tab="tab-python" href="#python-2" class="tabLink tab-python">Python</a>
+</li>
+<li>
+<a data-toggle="tab" data-tab="tab-ruby" href="#ruby-2" class="tabLink tab-ruby">Ruby</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="-2" class="active tab-pane">
+<pre class="prettyprint">$ curl https://api.pixian.ai/api/v2/remove-background \
+ -u xyz123:[secret] \
+ -F &#39;image.url=https://example.com/example.jpeg&#39; \
+ -o pixian_result.png
+</pre>
+</div>
+<div id="java-2" class="tab-pane">
+<pre class="prettyprint lang-java">// Requires: org.apache.httpcomponents.client5:httpclient5-fluent
+
+Request request = Request.post(&quot;https://api.pixian.ai/api/v2/remove-background&quot;)
+   .addHeader(&quot;Authorization&quot;, &quot;Basic cHh4YmJ6Yjk2bjJ3OGFtOltzZWNyZXRd&quot;)
+   .body(
+      MultipartEntityBuilder.create()
+         .addTextBody(&quot;image.url&quot;, &quot;https://example.com/example.jpeg&quot;) // TODO: Replace with your image URL
+         // TODO: Add more upload parameters here
+         .build()
+      );
+ClassicHttpResponse response = (ClassicHttpResponse) request.execute().returnResponse();
+
+if (response.getCode() == 200) {
+   // Write result to disk, TODO: or wherever you&#39;d like
+   try (FileOutputStream out = new FileOutputStream(&quot;pixian_result.png&quot;)) {
+      response.getEntity().writeTo(out);
+   }
+} else {
+   System.out.println(&quot;Request Failed: Status: &quot; + response.getCode() + &quot;, Reason: &quot; + response.getReasonPhrase());
+}
+</pre>
+</div>
+<div id="csharp-2" class="tab-pane">
+<pre class="prettyprint lang-csharp">using (var client = new HttpClient())
+using (var form = new MultipartFormDataContent())
+{
+   client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(&quot;Basic&quot;, &quot;INSERT_API_KEY_HERE&quot;);
+   form.Add(new StringContent(&quot;https://example.com/example.jpeg&quot;), &quot;image.url&quot;); // TODO: Replace with your image URL
+   // TODO: Add more upload parameters here
+
+   var response = client.PostAsync(&quot;https://api.pixian.ai/api/v2/remove-background&quot;, form).Result;
+
+   if (response.IsSuccessStatusCode)
+   {
+      // Write result to disk, TODO: or wherever you&#39;d like
+      FileStream outStream = new FileStream(&quot;pixian_result.png&quot;, FileMode.Create, FileAccess.Write, FileShare.None);
+      response.Content.CopyToAsync(outStream).ContinueWith((copyTask) =&gt; { outStream.Close(); });
+   }
+   else
+   {
+       Console.WriteLine(&quot;Request Failed: Status: &quot; + response.StatusCode + &quot;, Reason: &quot; + response.ReasonPhrase);
+   }
+}
+</pre>
+</div>
+<div id="js-2" class="tab-pane">
+<pre class="prettyprint lang-js">
+// Requires &quot;request&quot; to be installed (see https://www.npmjs.com/package/request)
+var request = require(&#39;request&#39;);
+var fs = require(&#39;fs&#39;);
+
+request.post({
+  url: &#39;https://api.pixian.ai/api/v2/remove-background&#39;,
+  formData: {
+    &#39;image.url&#39;: &#39;https://example.com/example.jpeg&#39;, // TODO: Replace with your image
+    // TODO: Add more upload options here
+  },
+  auth: {user: &#39;xyz123&#39;, pass: &#39;[secret]&#39;},
+  followAllRedirects: true,
+  encoding: null
+}, function(error, response, body) {
+  if (error) {
+    console.error(&#39;Request failed:&#39;, error);
+  } else if (!response || response.statusCode != 200) {
+    console.error(&#39;Error:&#39;, response &amp;&amp; response.statusCode, body.toString(&#39;utf8&#39;));
+  } else {
+    // Save result
+    fs.writeFileSync(&quot;pixian_result.png&quot;, body);
+  }
+});
+</pre>
+</div>
+<div id="php-2" class="tab-pane">
+<pre class="prettyprint lang-php">$ch = curl_init(&#39;https://api.pixian.ai/api/v2/remove-background&#39;);
+
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER,
+    array(&#39;Authorization: Basic cHh4YmJ6Yjk2bjJ3OGFtOltzZWNyZXRd&#39;));
+curl_setopt($ch, CURLOPT_POSTFIELDS,
+    array(
+      &#39;image.url&#39; =&gt; &#39;https://example.com/example.jpeg&#39;,
+      // TODO: Add more upload options here
+    ));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+$data = curl_exec($ch);
+if (curl_getinfo($ch, CURLINFO_HTTP_CODE) == 200) {
+  // Save result
+  file_put_contents(&quot;pixian_result.png&quot;, $data);
+} else {
+  echo &quot;Error: &quot; . $data;
+}
+curl_close($ch);</pre>
+</div>
+<div id="python-2" class="tab-pane">
+<pre class="prettyprint lang-python"># Requires &quot;requests&quot; to be installed (see https://pypi.org/project/requests/)
+import requests
+
+response = requests.post(
+    &#39;https://api.pixian.ai/api/v2/remove-background&#39;,
+    data={
+        &#39;image.url&#39;: &#39;https://example.com/example.jpeg&#39;,
+        # TODO: Add more upload options here
+    },
+    auth=(&#39;xyz123&#39;, &#39;[secret]&#39;)
+)
+if response.status_code == requests.codes.ok:
+    # Save result
+    with open(&#39;pixian_result.png&#39;, &#39;wb&#39;) as out:
+        out.write(response.content)
+else:
+    print(&quot;Error:&quot;, response.status_code, response.text)
+</pre>
+</div>
+<div id="ruby-2" class="tab-pane">
+<pre class="prettyprint lang-ruby"># Requires: gem install httpclient
+require &#39;httpclient&#39;
+
+client = HTTPClient.new default_header: {
+  &quot;Authorization&quot; =&gt; &quot;Basic cHh4YmJ6Yjk2bjJ3OGFtOltzZWNyZXRd&quot;
+}
+
+response = client.post(&quot;https://api.pixian.ai/api/v2/remove-background&quot;, {
+  &quot;image.url&quot; =&gt; &quot;https://example.com/example.jpeg&quot;, # TODO: Replace with your image URL
+  # TODO: Add more upload parameters here
+})
+
+if response.status == 200 then
+  # Write result to disk, TODO: or wherever you&#39;d like
+  File.open(&quot;pixian_result.png&quot;, &#39;w&#39;) { |file| file.write(response.body) }
+else
+  puts &quot;Error: Code: &quot; + response.status.to_s + &quot;, Reason: &quot; + response.reason
+end
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="alert alert-info">
+<p>
+Migrating from another provider? <a href="api/migrate.html" class="alert-link">Check out our migration guide</a>
+</p>
+</div>
+<h3 id="pricing">Pricing</h3>
+<p class="b">
+It is free to integrate with and test out the API, no purchase required. 
+</p>
+<p class="comment">
+Just use <code>test=true</code> for development. You can assess the result quality using the interactive Web App on the front page. 
+</p>
+<p>
+Production results require a credit pack purchase. Please see the <a href="pricing.html">pricing page</a>. 
+</p>
+<h3 id="authentication-and-security">Authentication &amp; Security</h3>
+<p>
+The API uses standard <a href="https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side">HTTP basic access authentication</a>. All requests to the API must be made over HTTPS and include your API Credentials, with the API Id as the user and API Secret as the password. 
+</p>
+<p>
+Your http client library must support <a href="http://en.wikipedia.org/wiki/Server_Name_Indication">Server Name Indication (SNI)</a> to successfully make requests. If you're getting weird handshake errors, this is most likely it. 
+</p>
+<h3 id="rate-limiting">Rate Limiting</h3>
+<p>
+Usage of the API is rate limited with generous allowances and no hard upper bound. 
+</p>
+<p>
+During normal end-user-driven operation you are unlikely to run into any rate limiting as usage then tends to ebb and flow in a way that the service handles gracefully. 
+</p>
+<p>
+However, for batch jobs we recommend starting out with at most 5 threads, adding 1 new thread every 5 minutes until you have reached the desired level of parallelism. Please reach out before starting if you need more than 100 concurrent threads. 
+</p>
+<p>
+If you submit too many requests you will start getting <code>429 Too Many Requests</code> responses. When this happens you should apply linear back off: on the first such response, wait 5 seconds until submitting the next request. On the second consecutive 429 response, wait 2*5=10 seconds until submitting the next request. On the third wait 3*5=15 seconds, etc. 
+</p>
+<p>
+You can reset the back off counter after a successful request, and you should apply the back off on a per-thread basis (i.e. the threads should operate independently of each other). 
+</p>
+<h3 id="error-json">Error JSON Object</h3>
+<p>
+We use conventional HTTP statuses to indicate success or failure of an API request, and include important error information in the returned Error JSON Object. 
+</p>
+<p>
+We strive to always return an Error JSON Object with any problematic request. However, it is always theoretically possible to have internal server failures that lead to a non-JSON error response. 
+</p>
+<div class="Tutorials-graphic_container">
+<table class="table table-striped Table-settings Table-settings_no_indent Table-mobile_collapse_two_col">
+<thead>
+<tr>
+<th colspan="2">
+<p class="h4">Attributes</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="b">status</td><td>The HTTP status of the response, repeated here to help with debugging. </td>
+</tr>
+<tr>
+<td class="b">code</td><td>Pixian.AI internal error code. </td>
+</tr>
+<tr>
+<td class="b">message</td><td>Human-readable error message, intended to be helpful in debugging. </td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>
+If the HTTP status for your request is 200 then no Error JSON Object will be returned, and you can safely assume that the request broadly speaking succeeded. 
+</p>
+<p>
+Some HTTP Client libraries raise exceptions for HTTP statuses in the <code>400</code>-<code>599</code> range. You will need to catch those exceptions and handle them appropriately. 
+</p>
+<div class="Tutorials-graphic_container">
+<table class="table table-striped Table-settings Table-settings_no_indent Table-mobile_collapse_two_col">
+<thead>
+<tr>
+<th class="nowrap">HTTP Status</th><th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code>200</code>-<code>299</code>
+</td>
+<td>
+<p>Success</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>400</code>-<code>499</code>
+</td>
+<td>
+<p>
+There's a problem with the information provided in the request (e.g. a parameter was missing). Please review the error message to figure out how to fix it. 
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>500</code>-<code>599</code>
+</td>
+<td>
+<p>
+There's been a Pixian.AI internal error. Wait a moment then try again, and if the problem persists please email us. 
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="Tutorials-graphic_container">
+<div class="Tutorials-image_header">
+<p class="h5">Example Error Response</p>
+</div>
+<pre class="prettyprint lang-js">{
+  &quot;error&quot; : {
+    &quot;status&quot; : 400,
+    &quot;code&quot; : 1006,
+    &quot;message&quot; : &quot;Failed to read the supplied image. &quot;
+  }
+}</pre>
+</div>
+<h3 id="delta-png">
+Delta PNG Format
+<small>
+Lower Latency & Bandwidth
+</small>
+</h3>
+<p>
+Pixian.AI is proud to be the first background removal service to offer the Delta PNG output format. Delta PNGs are faster to encode and much smaller than regular PNGs. This makes them highly suitable for latency and bandwidth sensitive applications, like mobile apps. 
+</p>
+<p>
+<a style="display: inline-flex;" href="api/deltaPng.html" class="bttn bttn_dark">
+Learn more 
+<img src="https://dq2gn5p12glyq.cloudfront.net/p/assets/images/right-arrow-white_d2ba81f54cd360efa5cec03118c3737d.svg" importance="low" alt="Right arrow" decode="async" loading="lazy" class="bttn_icon_right" height="13">
+</a>
+</p>
+<div class="Tutorials-section">
+<div class="Tutorials-step">
+<div class="row">
+<div class="col-md-12">
+<h2 id="remove-background">
+Remove Background 
+<small>
+<code>POST</code>
+</small>
+<br>
+<small class="break_all">
+<code>https://api.pixian.ai/api/v2/remove-background</code>
+</small>
+</h2>
+</div>
+</div>
+<p>
+To remove the background from an image, you do a standard HTTP POST file upload. Keep in mind that the <a href="http://en.wikipedia.org/wiki/MIME#Form_Data">Content-Type</a> has to be <code>multipart/form-data</code> when uploading binary files. 
+</p>
+<form enctype="multipart/form-data" method="POST" action="https://api.pixian.ai/api/v2/remove-background" class="apiForm">
+<div class="Tutorials-graphic_container">
+<table class="table table-striped Table-settings Table-settings_no_indent Table-mobile_collapse_two_col">
+<thead>
+<tr>
+<th colspan="2">
+<p class="h4">Parameters</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">
+<p>
+The input image must be provided as one of: 
+</p>
+<div class="Tutorials-graphic_container">
+<table class="table table-striped Table-settings Table-settings_no_indent Table-mobile_collapse_two_col">
+<tr id="image">
+<td>
+<div class="form-group">
+<label class="control-label">image</label>
+<br>
+<input name="image" style="display: inline-block;" type="file">
+</div>
+Binary
+</td>
+<td>
+<p>
+A binary file. 
+</p>
+</td>
+</tr>
+<tr id="image.base64">
+<td>
+<div class="form-group">
+<label class="control-label">image.base64</label>
+<br>
+<input name="image.base64" type="text" class="form-control" value>
+</div>
+String
+</td>
+<td>
+<p>
+A base64-encoded string. The string can be at most 1 megabyte in size. 
+</p>
+</td>
+</tr>
+<tr id="image.url">
+<td>
+<div class="form-group">
+<label class="control-label">image.url</label>
+<br>
+<input name="image.url" type="text" class="form-control" value>
+</div>
+String
+</td>
+<td>
+<p>
+A URL to fetch and process. 
+</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+Must be a .bmp, .gif, .jpeg, .png, or .tiff file. 
+</p>
+<p>
+The maximum image upload size (= width &times; height) is 32,000,000 pixels, which gets shrunk to <code>max_pixels</code>. 
+</p>
+</td>
+</tr>
+<tr id="test">
+<td>
+<div class="form-group">
+<label class="control-label">test</label>
+<br>
+<label class="radio-inline">
+<input name="test" type="radio" value="true"><code>true</code>
+</label>
+<label class="radio-inline">
+<input name="test" checked="true" type="radio" value="false"><code>false</code>
+</label>
+</div>
+Boolean, default: <code>false</code>
+</td>
+<td>
+<p>
+Pass in <code>true</code> to indicate that this is a test image. 
+</p>
+<p>
+Omit or pass in  <code>false</code> for production images. 
+</p>
+<p>
+Test images are free to process, but the result will have a watermark embedded. 
+</p>
+</td>
+</tr>
+<tr id="max_pixels">
+<td>
+<div class="form-group">
+<label class="control-label">max_pixels</label>
+<br>
+<input min="100" max="25000000" name="max_pixels" step="1" type="number" class="form-control" value="25000000">
+</div>
+Integer, <code>100</code> to <code>25000000</code>, default: <code>25000000</code>
+</td>
+<td>
+<p>
+The maximum input image size (= width &times; height). Images larger than this will be shrunk to this size before processing. 
+</p>
+</td>
+</tr>
+<tr id="background.color">
+<td>
+<div class="form-group">
+<label class="control-label">background.color</label>
+<br>
+<input name="background.color" placeholder="#0055FF" type="text" class="form-control" value>
+</div>
+Format: '#RRGGBB', e.g. <code>#0055FF</code>
+</td>
+<td>
+<p>
+Background color to apply to the result. Omit to leave a transparent background. 
+</p>
+<p class="comment">
+Be sure to include the '#' prefix. 
+</p>
+</td>
+</tr>
+<tr id="result.crop_to_foreground">
+<td>
+<div class="form-group">
+<label class="control-label">result.crop_to_foreground</label>
+<br>
+<label class="radio-inline">
+<input name="result.crop_to_foreground" type="radio" value="true"><code>true</code>
+</label>
+<label class="radio-inline">
+<input name="result.crop_to_foreground" checked="true" type="radio" value="false"><code>false</code>
+</label>
+</div>
+Boolean, default: <code>false</code>
+</td>
+<td>
+<p>
+Whether to crop the result to the foreground object. 
+</p>
+<p>
+Very useful together with <code>result.margin</code> and <code>result.target_size</code> to get a nicely sized and centered result every time. 
+</p>
+</td>
+</tr>
+<tr id="result.margin">
+<td>
+<div class="form-group">
+<label class="control-label">result.margin</label>
+<br>
+<input name="result.margin" placeholder="10px 20% 5px 15%" type="text" class="form-control" value="0px">
+</div>
+Format: '(x.y%|px){1,4}', e.g. <code>10px 20% 5px 15%</code>, default: <code>0px</code>
+</td>
+<td>
+<p>
+Margin to add to the result. 
+</p>
+<p>
+It's added regardless of if the result is cropped to the foreground or not. 
+</p>
+<p>
+If <code>result.target_size</code> is specified, then the margin is inset, i.e. it doesn't expand the effective target size. 
+</p>
+<p>
+The supported units are <code>%</code> and <code>px</code>. It follows CSS semantics, so you can use any of: 
+<ul>
+<li>
+<code>[all]</code>
+</li>
+<li>
+<code>[top/bottom] [left/right]</code>
+</li>
+<li>
+<code>[top] [left/right] [bottom]</code>
+</li>
+<li>
+<code>[top] [right] [bottom] [left]</code>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+<tr id="result.target_size">
+<td>
+<div class="form-group">
+<label class="control-label">result.target_size</label>
+<br>
+<input name="result.target_size" placeholder="1920 1080" type="text" class="form-control" value>
+</div>
+Format: 'w h', e.g. <code>1920 1080</code>
+</td>
+<td>
+<p>
+Enforce a specific result size in pixels. The result will be scaled to fit within the specified size. If there's excess space then it's always horizontally centered, with <code>result.vertical_alignment</code> controlling the vertical treatment. 
+</p>
+</td>
+</tr>
+<tr id="result.vertical_alignment">
+<td>
+<div class="form-group">
+<label class="control-label">result.vertical_alignment</label>
+<br>
+<label class="radio-inline">
+<input name="result.vertical_alignment" type="radio" value="top"><code>top</code>
+</label>
+<label class="radio-inline">
+<input name="result.vertical_alignment" checked="true" type="radio" value="middle"><code>middle</code>
+</label>
+<label class="radio-inline">
+<input name="result.vertical_alignment" type="radio" value="bottom"><code>bottom</code>
+</label>
+</div>
+Enum, default: <code>middle</code>
+</td>
+<td>
+<p>
+Specifies how to allocate excess vertical space when <code>result.target_size</code> is used. 
+</p>
+</td>
+</tr>
+<tr id="output.format">
+<td>
+<div class="form-group">
+<label class="control-label">output.format</label>
+<br>
+<label class="radio-inline">
+<input name="output.format" checked="true" type="radio" value="auto"><code>auto</code>
+</label>
+<label class="radio-inline">
+<input name="output.format" type="radio" value="png"><code>png</code>
+</label>
+<label class="radio-inline">
+<input name="output.format" type="radio" value="jpeg"><code>jpeg</code>
+</label>
+<label class="radio-inline">
+<input name="output.format" type="radio" value="delta_png"><code>delta_png</code>
+</label>
+</div>
+Enum, default: <code>auto</code>
+</td>
+<td>
+<p>
+Output format. <code>auto</code> is interpreted as <code>png</code> for transparent results, and <code>jpeg</code> for opaque results, i.e. when a <code>background.color</code> has been specified. 
+</p>
+<p>
+<code>delta_png</code> is an advanced, fast, and highly compact format especially useful for low-latency, bandwidth-constrained situations like mobile apps. It encodes the background as transparent black <code>0x00000000</code> and the foreground as transparent white <code>0x00FFFFFF</code>. Partially transparent pixels have their actual color values. Together with the input image you can use this to reconstruct the full result. <a href="api/deltaPng.html">Learn more about the Delta PNG format</a>
+</p>
+<p class="comment">
+<code>background.color</code>, <code>result.crop_to_foreground</code>, <code>result.margin</code>, <code>result.target_size</code>, and <code>result.vertical_alignment</code> are ignored when using <code>delta_png</code>. The result must be the same size as the input image, otherwise your decoding will fail, so <code>max_pixels</code> must not have caused the input to be shrunk. 
+</p>
+</td>
+</tr>
+<tr id="output.jpeg_quality">
+<td>
+<div class="form-group">
+<label class="control-label">output.jpeg_quality</label>
+<br>
+<input min="1" max="100" name="output.jpeg_quality" step="1" type="number" class="form-control" value="75">
+</div>
+Integer, <code>1</code> to <code>100</code>, default: <code>75</code>
+</td>
+<td>
+<p>
+The quality to use when encoding JPEG results. 
+</p>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<div style="margin: 10px 0 20px; justify-content: center; display: flex;">
+<button type="submit" class="bttn bttn_dark">Remove Background!</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="Tutorials-graphic_container">
+<table class="table table-striped Table-settings Table-settings_no_indent Table-mobile_collapse_two_col">
+<thead>
+<tr>
+<th colspan="2">
+<p class="h4">Result Headers</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="nowrap">
+<code>X-Credits-Charged</code>
+</td>
+<td>
+The actual credits charged. 
+</td>
+</tr>
+<tr>
+<td class="nowrap">
+<code>X-Credits-Calculated</code>
+</td>
+<td>
+The calculated credits that would have been charged if this were a production request. 
+<i>
+Only returned for test requests. 
+</i>
+</td>
+</tr>
+<tr>
+<td class="nowrap">
+<code>X-Input-Orientation</code>
+</td>
+<td>
+The EXIF orientation tag we read from and applied to the input image. It's an integer value from 1 to 8, inclusive. This is useful if your image loading library doesn't support EXIF orientation. <a rel="noopener" href="https://magnushoff.com/articles/jpeg-orientation/" target="_blank">Read more about EXIF orientation here <span style="font-size: smaller;" class="glyphicon glyphicon-new-window"> </span></a>
+</td>
+</tr>
+<tr>
+<td class="nowrap">
+<code>X-Input-Size</code>
+</td>
+<td>
+<code>[width] [height]</code> of the input image in pixels, before any size constraints were applied. 
+</td>
+</tr>
+<tr>
+<td class="nowrap">
+<code>X-Result-Size</code>
+</td>
+<td>
+<code>[width] [height]</code> of the result image, in pixels. 
+</td>
+</tr>
+<tr>
+<td class="nowrap">
+<code>X-Input-Foreground</code>
+</td>
+<td>
+<code>[top] [left] [width] [height]</code> bounding box of the foreground in the input image coordinates. 
+</td>
+</tr>
+<tr>
+<td class="nowrap">
+<code>X-Result-Foreground</code>
+</td>
+<td>
+<code>[top] [left] [width] [height]</code> bounding box of the foreground in the result image coordinates. 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</form>
+</div>
+</div>
+<h3 id="changelog">API Changelog</h3>
+<div class="Tutorials-graphic_container">
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Date</th><th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jan 16, 2024</td>
+<td>
+Documented the Error JSON Object. 
+</td>
+</tr>
+<tr>
+<td>Jan 11, 2024</td>
+<td>
+Now actually returning the <code>X-Credits-Charged</code> header and added the <code>X-Credits-Calculated</code> header for test requests. 
+</td>
+</tr>
+<tr>
+<td>Jun 13, 2023</td>
+<td>
+Updated the API to version 2 and the parameters from camelCase to snake_case for easier readability. Previous version of the API is deprecated but still available. 
+</td>
+</tr>
+<tr>
+<td>May 3, 2023</td>
+<td>
+Greatly expanded the API parameters. 
+</td>
+</tr>
+<tr>
+<td>Apr 28, 2023</td>
+<td>
+Updated the API endpoint. 
+</td>
+</tr>
+<tr>
+<td>Mar 21, 2023</td>
+<td>
+Initial release. 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul style="margin: 60px 0;" class="nav nav-pills">
+<li class="active">
+<a href="api.html">Overview</a>
+</li>
+<li>
+<a href="api/deltaPng.html">Delta PNG Format</a>
+</li>
+<li>
+<a href="api/migrate.html">Migrating</a>
+</li>
+</ul>
+<div style="width: 250px; margin: 30px auto;">
+<a href="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fapi" data-header="Please Create An Account or Log In to Create an API Key" class="Signon-trigger bttn bttn_dark" data-url="https://cedarlakeventures.com/signon/v0/w87b5e26a4b5ea824/single?lc=en-US&amp;loginPath=%2Flogin_callback%3Fredir%3D%252Fapi&amp;noChrome=1">Get API Key</a>
+</div>
+</div>
+</div>
+</div>
+<footer id="footer">
+<hr>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="pull-left">
+<p>
+<a href="index.html">Pixian.AI</a>
+</p>
+<p>
+support@<span style='display:none;'>__remove_this_part__</span>pixian.ai
+</p>
+<p>
+ &copy; <a href="https://cedarlakeventures.com/">Cedar Lake Ventures, Inc.</a>
+</p>
+<p>
+<a href="https://cedarlakeventures.com/affiliates">Affiliate Program</a>
+</p>
+</div>
+<div style="margin-left: 20px;" class="pull-right">
+<p>
+<a href="about.html">About</a>
+</p>
+<p>
+<a href="policies/terms.html">Terms</a>
+</p>
+<p>
+<a href="policies/privacy.html">Privacy</a>
+</p>
+</div>
+<div class="pull-right">
+<p>
+<a href="api.html">API</a>
+</p>
+<p>
+<a href="comparisons.html">Comparisons</a>
+</p>
+<p>
+<a href="index.html#pricing">Pricing</a>
+</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+</div>
+</div>
+</div>
+</footer>
+<script src="assets/code-prettify/prettify.js" type="text/javascript"></script>
+<script src="assets/code-prettify/prettify.js" type="text/javascript"></script>
+<link rel="stylesheet" href="assets/code-prettify/prettify.css" type="text/css">
+<link rel="stylesheet" href="assets/code-prettify/prettify.css" type="text/css">
+</body>
+
+
+<!-- Mirrored from pixian.ai/api by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Feb 2024 05:59:32 GMT -->
+</html>
